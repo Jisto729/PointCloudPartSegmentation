@@ -7,7 +7,7 @@ from torch.utils.data import Dataset
 
 
 class BuildingNetDataset(Dataset):
-    def __init__(self, point_cloud_dir, label_dir, splits_dir, split: str):
+    def __init__(self, point_cloud_dir, label_dir, splits_dir, split: str = 'train'):
         #split: train/val/test/all
         self.point_cloud_dir = point_cloud_dir
         self.label_dir = label_dir
