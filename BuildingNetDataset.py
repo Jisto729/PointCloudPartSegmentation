@@ -28,6 +28,7 @@ class BuildingNetDataset(Dataset):
     def __len__(self):
         return self.size
 
+    #TODO add loading into init
     def __getitem__(self, index):
         with open(os.path.join(self.label_dir, self.model_names[index] + '_label.json'), 'r') as file:
             labels = json.load(file)
